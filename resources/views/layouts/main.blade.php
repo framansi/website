@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{$meta}}
+    <link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon">
+
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="{{ mix('js/app.js') }}" defer></script>
