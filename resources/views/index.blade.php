@@ -136,7 +136,7 @@
     </div>
 
 </div>
-<section class="antialiased -mt-16">
+<section class="antialiased -mt-16 sm:-mt-8">
     <div class="parent overflow-x-clip -mb-24 sm:-mb-5 z-10 -mt-32 sm:mt-0">
         <div class="child"></div>
         <div class="child"></div>
