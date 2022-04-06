@@ -240,6 +240,13 @@
                 </div>
 
             </div>
+            <div class="flex justify-center">
+                <a href="{{route('contact')}}" class="relative inline-block px-8 py-3 my-5 font-medium group ">
+                    <span class="absolute rounded inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                    <span class="absolute rounded inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-orange-400"></span>
+                    <span class="relative text-black text-base xl:text-xl font-bold group-hover:text-white">Prenota un incontro</span>
+                </a>
+            </div>
         </div>
     </div>
 </x-layouts-main>
