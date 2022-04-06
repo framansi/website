@@ -21,5 +21,7 @@ Route::get('/servizi/creare-siti-web', [OneController::class, 'website'])->name(
 Route::get('/servizi/sviluppo-ecommerce', [OneController::class, 'ecommerce'])->name('portfolio.ecommerce');
 Route::get('/contattami', [OneController::class, 'contact'])->name('contact');
 Route::get('/cookie-policy', [OneController::class, 'cookie'])->name('cookie');
+Route::post('/contattami/send', [OneController::class,'send'])->name('send');
+
 
 

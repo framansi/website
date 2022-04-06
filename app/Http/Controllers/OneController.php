@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactSender;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class OneController extends Controller
 {
@@ -47,9 +49,28 @@ class OneController extends Controller
         return view('cookie');
     }
 
-    public function privacy()
+    public function send(Request $request)
     {
-        return view('privacy');
+
+        $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'message' => 'required|string',
+            'accept' => 'required|accepted',
+
+        ]);
+
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+        ];
+
+
+        if ($data) {
+            Mail::to('job@francescomansi.me')->send(new ContactSender($data));
+            return redirect()->back()->with('success','Modifiche Salvate');
+        }
     }
 
 }
