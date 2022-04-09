@@ -3,7 +3,7 @@
     "lang": "it-IT",
     "name": "Francesco Mansi",
     "scope": "/",
-    "display": "standalone",
+    "display": "fullscreen",
     "start_url": "/",
     "short_name": "FM",
     "description": "Francesco Mansi Web Developer e Web designer",
@@ -47,6 +47,9 @@
             "src": "/img/icons/512x512.png",
             "sizes": "512x512"
         },
+       ],
+
+        "splash_pages": [
         {
             "src": "/img/icons/splash-640x1136.png",
             "sizes": "640x1136"
