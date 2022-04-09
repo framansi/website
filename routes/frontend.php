@@ -14,6 +14,7 @@ use App\Http\Controllers\OneController;
 |
 */
 Route::get('/', [OneController::class, 'index'])->name('index');
+Route::get('/offline', [OneController::class, 'offline'])->name('offline');
 Route::get('/chi-sono', [OneController::class, 'about'])->name('about');
 Route::get('/servizi', [OneController::class, 'portfolio'])->name('portfolio.index');
 Route::get('/servizi/gestionale-personalizzato', [OneController::class, 'gestionale'])->name('portfolio.gestionale');

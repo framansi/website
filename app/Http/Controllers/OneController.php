@@ -12,6 +12,10 @@ class OneController extends Controller
     {
         return view('index');
     }
+    public function offline()
+    {
+        return view('vendor.laravelpwa.offline');
+    }
 
     public function about()
     {

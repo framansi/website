@@ -10,7 +10,7 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="/js/pace.js" defer></script>
-
+    @laravelPWA
 </head>
 
 <body class="overflow-x-hidden antialiased" x-cloak x-data='{isOpenNavigation: false}'>
