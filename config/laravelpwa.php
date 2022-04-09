@@ -3,7 +3,7 @@
 return [
     'name' => 'Francesco Mansi',
     'manifest' => [
-        'name' => env('APP_NAME', 'Francesco Mansi'),
+        'name' => 'Francesco Mansi',
         'short_name' => 'Mansi Web',
         'start_url' => '/',
         'background_color' => '#f19f19',
@@ -14,7 +14,8 @@ return [
         'icons' => [
             '72x72' => [
                 'path' => '/img/icons/android-icon-72x72.png',
-                'purpose' => 'any'
+                'purpose' => 'any',
+                'sizes' => '72x72',
             ],
             '96x96' => [
                 'path' => '/img/icons/android-icon-96x96.png',
@@ -26,7 +27,8 @@ return [
             ],
             '144x144' => [
                 'path' => '/img/icons/android-icon-144x144.png',
-                'purpose' => 'any'
+                'purpose' => 'any',
+                'sizes' => '144x144',
             ],
             '152x152' => [
                 'path' => '/img/icons/apple-icon-152x152.png',

@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{$meta}}
     <link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon">
-
-    <!-- Styles -->
+   @laravelPWA
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="/js/pace.js" defer></script>
-    @laravelPWA
+
 </head>
 
 <body class="overflow-x-hidden antialiased" x-cloak x-data='{isOpenNavigation: false}'>
