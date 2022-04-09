@@ -46,7 +46,7 @@
         {
             "src": "/img/icons/512x512.png",
             "sizes": "512x512"
-        },
+        }
        ],
 
         "splash_pages": [
