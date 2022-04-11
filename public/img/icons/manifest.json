@@ -10,6 +10,7 @@
     "orientation": "any",
     "theme_color": "#f19f19",
     "background_color": "#000",
+    "categories": ["books", "education", "productivity"],
     "icons": [
         {
             "src": "/img/icons/maskable_icon_x192.png",
@@ -70,5 +71,14 @@
             "type": "image/jpg",
             "sizes": "378x817"
         }
-       ]
+       ],
+    "shortcuts": [
+        {
+            "name": "Contattami",
+            "short_name": "Contattami",
+            "description": "Il form per richiedere un consulto",
+            "url": "/?utm_source=pwwa",
+            "icons": [{ "src": "/img/icons/maskable_icon_x192.png", "sizes": "192x192" }]
+        }
+        ]
 }
