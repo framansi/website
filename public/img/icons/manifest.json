@@ -68,22 +68,22 @@
     "screenshots": [
         {
             "src": "/img/icons/screen1.png",
-            "type": "image/jpg",
+            "type": "image/png",
             "sizes": "378x817"
         },
         {
             "src": "/img/icons/screen2.png",
-            "type": "image/jpg",
+            "type": "image/png",
             "sizes": "374x812"
         },
         {
             "src": "/img/icons/screen3.png",
-            "type": "image/jpg",
+            "type": "image/png",
             "sizes": "374x812"
         },
         {
             "src": "/img/icons/screen4.png",
-            "type": "image/jpg",
+            "type": "image/png",
             "sizes": "372x812"
         }
        ],
