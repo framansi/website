@@ -74,17 +74,17 @@
         {
             "src": "/img/icons/screen2.png",
             "type": "image/png",
-            "sizes": "374x812"
+            "sizes": "378x817"
         },
         {
             "src": "/img/icons/screen3.png",
             "type": "image/png",
-            "sizes": "374x812"
+            "sizes": "378x817"
         },
         {
             "src": "/img/icons/screen4.png",
             "type": "image/png",
-            "sizes": "372x812"
+            "sizes": "378x817"
         }
        ],
     "shortcuts": [
@@ -92,7 +92,7 @@
             "name": "Contattami",
             "short_name": "Contattami",
             "description": "Il form per richiedere un consulto",
-            "url": "/?utm_source=pwwa",
+            "url": "/contattami",
             "icons": [{ "src": "/img/icons/maskable_icon_x192.png", "sizes": "192x192" }]
         }
         ]
