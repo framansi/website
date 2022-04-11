@@ -70,6 +70,21 @@
             "src": "/img/icons/screesnshot.png",
             "type": "image/jpg",
             "sizes": "378x817"
+        },
+        {
+            "src": "/img/icons/screesnshot1.png",
+            "type": "image/jpg",
+            "sizes": "378x817"
+        },
+        {
+            "src": "/img/icons/screesnshot2.png",
+            "type": "image/jpg",
+            "sizes": "378x817"
+        },
+        {
+            "src": "/img/icons/screesnshot3.png",
+            "type": "image/jpg",
+            "sizes": "378x817"
         }
        ],
     "shortcuts": [
