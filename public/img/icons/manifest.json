@@ -67,24 +67,19 @@
     ],
     "screenshots": [
         {
-            "src": "/img/icons/screen1.png",
-            "type": "image/png",
-            "sizes": "378x817"
+            "src": "/img/icons/screen1.jpg",
+            "type": "image/jpg",
+            "sizes": "720x1280"
         },
         {
-            "src": "/img/icons/screen2.png",
-            "type": "image/png",
-            "sizes": "378x817"
+            "src": "/img/icons/screen2.jpg",
+            "type": "image/jpg",
+            "sizes": "720x1280"
         },
         {
-            "src": "/img/icons/screen3.png",
-            "type": "image/png",
-            "sizes": "378x817"
-        },
-        {
-            "src": "/img/icons/screen4.png",
-            "type": "image/png",
-            "sizes": "378x817"
+            "src": "/img/icons/screen3.jpg",
+            "type": "image/jpg",
+            "sizes": "720x1280"
         }
        ],
     "shortcuts": [
