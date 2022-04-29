@@ -26,18 +26,18 @@
         <meta property="og:url" content="https://francescomansi.me/servizi" />
         <meta property="og:image" content="https://francescomansi.me/img/francesco-mansi-web.jpg" />
         <meta property="og:site_name" content="Francesco Mansi - Web Developer e Web Designer" />
-        <meta property="og:description" content="Realizzazione siti web, creazione siti web e-commerce e software gestionali per agenzie immobiliari, pizzerie, ristoranti e associazioni a Monopoli" />
+        <meta property="og:description" content="Ecco una parte dei miei lavori e collaborazioni, potrai trovare siti web, siti web e-commerce e software gestionali per agenzie immobiliari, pizzerie, ristoranti e associazioni a Monopoli e Bari." />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@framansi" />
         <meta name="twitter:creator" content="@framansi"/>
         <meta name="twitter:domain" content="https://twitter.com/framansi" />
         <meta name="twitter:title" content="Francesco Mansi - Web Developer e Web Designer" />
-        <meta name="twitter:description" content="Realizzazione siti web, creazione siti web e-commerce e software gestionali per agenzie immobiliari, pizzerie, ristoranti e associazioni a Monopoli" />
+        <meta name="twitter:description" content="Ecco una parte dei miei lavori e collaborazioni, potrai trovare siti web, siti web e-commerce e software gestionali per agenzie immobiliari, pizzerie, ristoranti e associazioni a Monopoli e Bari." />
         <meta name="twitter:image" content="https://francescomansi.me/img/francesco-mansi-web.jpg" />
 
         <title>Servizi | Francesco Mansi - Web Developer e Web Designer</title>
-        <meta name="description" content="Realizzazione siti web, creazione siti web e-commerce e software gestionali per agenzie immobiliari, pizzerie, ristoranti e associazioni a Monopoli.">
+        <meta name="description" content="Ecco una parte dei miei lavori e collaborazioni, potrai trovare siti web, siti web e-commerce e software gestionali per agenzie immobiliari, pizzerie, ristoranti e associazioni a Monopoli e Bari.">
         <meta name="keywords" content="Realizzazione siti web, creazione siti web e-commerce, creazione software gestionali, monopoli, Polignano a mare, Conversano, Capitolo, Bari, menu digitale, agenzie immobiliari">
 
         <link rel="alternate" type="application/atom+xml" href="https://francescomansi.me/rss" title="Francesco Mansi | FEED RSS">
@@ -51,7 +51,7 @@
             "@id": "https://francescomansi.me",
             "name": "Francesco Mansi",
             "nationality": "Italian",
-            "alternateName":"Realizzazione siti web, creazione siti web e-commerce e software gestionali per agenzie immobiliari, pizzerie, ristoranti e associazioni a Monopoli",
+            "alternateName":"Francesco Mansi",
             "birthPlace" : {
                 "@type": "Place",
                 "address": {
@@ -62,7 +62,7 @@
                 }
             },
             "gender": "Male",
-            "Description": "Realizzazione siti web, creazione siti web e-commerce e software gestionali per agenzie immobiliari, pizzerie, ristoranti e associazioni a Monopoli",
+            "Description": "Ecco una parte dei miei lavori e collaborazioni, potrai trovare siti web, siti web e-commerce e software gestionali per agenzie immobiliari, pizzerie, ristoranti e associazioni a Monopoli e Bari",
             "jobTitle": "Web Developer",
             "url": "https://francescomansi.me",
             "image": "https://francescomansi.me/img/francesco-mansi-web.jpg",
