@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OneController;
+use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,8 @@ Route::get('/servizi/sviluppo-ecommerce', [OneController::class, 'ecommerce'])->
 Route::get('/contattami', [OneController::class, 'contact'])->name('contact');
 Route::get('/cookie-policy', [OneController::class, 'cookie'])->name('cookie');
 Route::post('/contattami/send', [OneController::class,'send'])->name('send');
+Route::get('/corso/laravel', [CourseController::class, 'laravel'])->name('course.laravel');
+Route::get('/corso/tailwind', [CourseController::class, 'tailwind'])->name('course.tailwind');
 
 
 

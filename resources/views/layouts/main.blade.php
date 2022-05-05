@@ -14,7 +14,7 @@
 
 <body class="overflow-x-hidden antialiased" x-cloak x-data='{isOpenNavigation: false}'>
 
-<div id="top-menu" class="w-full h-24 px-8 pt-2 bg-white sticky z-30 top-0 shadow md:shadow-none border-none">
+<div id="top-menu" class="w-full h-24 px-8 pt-2 bg-white sticky z-30 top-0 shadow lg:shadow-none border-none">
     <div class="container flex items-center justify-between h-full max-w-6xl mx-auto">
         <a href="{{route('index')}}" class="relative flex items-center inline-block h-5 h-full font-black">
             <svg class="h-16"  viewBox="0 0 337.2 563.52" xml:space="preserve">
@@ -69,10 +69,82 @@
             </svg>
             <span class="ml-3 text-2xl font-black">Francesco Mansi</span>
         </a>
-        <div id="nav" class="absolute top-0 left-0 block w-full mt-20 border-b border-gray-200 sm:border-none sm:px-5 md:block md:relative sm:mt-0 sm:px-0 sm:w-auto hidden">
+        <div id="nav" class="absolute top-0 left-0 block w-full mt-20 border-b border-gray-200 md:border-none sm:px-5 lg:block lg:relative sm:mt-0 sm:px-0 sm:w-auto hidden">
             <nav class="flex flex-col items-center py-3 bg-white border border-gray-100 sm:flex-row sm:bg-transparent sm:border-none sm:py-0">
                 <a href="{{route('index')}}"  class="relative px-1 mb-1 mb-5 mr-0 text-base font-bold sm:mb-0 sm:mr-4 lg:mr-8 group @if(request()->routeIs('index'))  text-orange-400  @else hover:text-orange-400 @endif ">Home @if(request()->routeIs('index'))   <span class="absolute bottom-0 left-0 w-full h-1 -mb-2 bg-orange-300 rounded-full"></span>  @else <span class="absolute bottom-0 left-0 w-full h-0 group-hover:h-1 transition transform -mb-2 -translate-x-6 group-hover:translate-x-0 ease-in-out bg-orange-300 rounded-full"></span> @endif </a>
                 <a href="{{route('about')}}" class="relative px-1 mb-1 mb-5 mr-0 text-base font-bold sm:mb-0 sm:mr-4 lg:mr-8 group @if(request()->routeIs('about'))  text-orange-400  @else hover:text-orange-400 @endif ">Chi Sono @if(request()->routeIs('about'))   <span class="absolute bottom-0 left-0 w-full h-1 -mb-2 bg-orange-300 rounded-full"></span>  @else <span class="absolute bottom-0 left-0 w-full h-0 group-hover:h-1 transition transform -mb-2 -translate-x-6 group-hover:translate-x-0 ease-in-out bg-orange-300 rounded-full"></span> @endif </a>
+                <div class="relative" x-data="{ open: false, focus: false }" @keydown.escape="open=false">
+                    <button type="button" class="relative px-1 mb-1 mb-5 mr-0 text-base font-bold sm:mb-0 sm:mr-4 lg:mr-8 group inline-flex items-center" :class="{ 'text-orange-400': open }" @click="open=!open" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                        <span>Corsi</span>
+                        <svg class="text-gray-400 ml-2 h-5 w-5" :class="{ 'text-orange-400': open}"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+
+
+                    <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1"  class="absolute z-10 :-ml-10 mt-6 transform px-2 w-screen max-w-md sm:px-0 xl:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-ref="panel" @click.away="open = false">
+                        <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                            <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+
+                                <a href="{{route('course.laravel')}}" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                    <svg class="flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="50" height="52" viewBox="0 0 50 52"><title>Logomark</title><path d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.402.694l-9.209 5.302V39.25c0 .286-.152.55-.4.694L20.42 51.01c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1-.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054L.402 39.944A.801.801 0 0 1 0 39.25V6.334c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216l17.62-10.144zM1.602 7.719v31.068L19.22 48.93v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-.002-21.481L4.965 9.654 1.602 7.72zm8.81-5.994L2.405 6.334l8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764l4.645-2.674V7.719l-3.363 1.936-4.646 2.675v20.096l3.364-1.937zM39.243 7.164l-8.006 4.609 8.006 4.609 8.005-4.61-8.005-4.608zm-.801 10.605l-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937v-9.124zM20.02 38.33l11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833 7.993 4.524z" fill="#FF2D20" fill-rule="evenodd"/></svg>
+
+                                    <div class="ml-4">
+                                        <p class="text-base font-medium text-gray-900">
+                                            Laravel
+                                        </p>
+                                        <p class="mt-1 text-sm text-gray-500">
+                                            Risorse gratuite e a pagamento relative al Framework Laravel
+                                        </p>
+                                    </div>
+                                </a>
+
+                                <a href="{{route('course.tailwind')}}" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                    <svg class="flex-shrink-0 h-6 w-6" width="1000" height="1000" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M489.5 226.499C328 231.632 280 346.999 269 409.499C283.333 386.332 328.5 335.5 395 335.5C472.5 335.5 531.5 422 567.5 449C611.237 481.803 699.123 525.115 814.5 490C906.5 462 949.167 364.332 958.5 317.999C914 378.499 846.5 414.838 763 371.999C705.5 342.499 662.5 221 489.5 226.499Z" fill="#07B6D5"/>
+                                        <path d="M261 500.999C99.5 506.132 51.5 621.499 40.5 683.999C54.8333 660.832 100 610 166.5 610C244 610 303 696.5 339 723.5C382.737 756.303 470.623 799.615 586 764.5C678 736.5 720.667 638.832 730 592.499C685.5 652.999 618 689.338 534.5 646.499C477 616.999 434 495.5 261 500.999Z" fill="#07B6D5"/>
+                                    </svg>
+                                     <div class="ml-4">
+                                        <p class="text-base font-medium text-gray-900">
+                                            Tailwind CSS
+                                        </p>
+                                        <p class="mt-1 text-sm text-gray-500">
+                                            Risorse gratuite e a pagamento relative al Framework Tailwind
+                                        </p>
+                                    </div>
+                                </a>
+
+
+
+
+                            </div>
+                            <div class="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+
+                                <div class="flow-root">
+                                    <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">
+                                        <svg class="flex-shrink-0 h-6 w-6 text-gray-400" x-description="Heroicon name: outline/play" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="ml-3">Canale Youtube</span>
+                                    </a>
+                                </div>
+
+                                <div class="flow-root">
+                                    <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">
+                                        <svg class="flex-shrink-0 h-6 w-6 text-gray-400" x-description="Heroicon name: outline/phone" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                        </svg>
+                                        <span class="ml-3">Prenota Consulenza</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
                 <a href="{{route('portfolio.index')}}" class="relative px-1 mb-1 mb-5 mr-0 text-base font-bold sm:mb-0 sm:mr-4 lg:mr-8 group @if(request()->routeIs('portfolio.*'))  text-orange-400  @else hover:text-orange-400 @endif ">Servizi @if(request()->routeIs('portfolio.*'))   <span class="absolute bottom-0 left-0 w-full h-1 -mb-2 bg-orange-300 rounded-full"></span>  @else <span class="absolute bottom-0 left-0 w-full h-0 group-hover:h-1 transition transform -mb-2 -translate-x-6 group-hover:translate-x-0 ease-in-out bg-orange-300 rounded-full"></span> @endif</a>
 
                 <!-- Start CTA Button -->
@@ -84,7 +156,7 @@
                 <!-- End CTA Button -->
             </nav>
         </div>
-        <button id="mobile-nav-menu" class="text-black w-14 h-14 relative focus:outline-none bg-white md:hidden" @click.outside="isOpenNavigation=false" @click="isOpenNavigation = !isOpenNavigation">
+        <button id="mobile-nav-menu" class="text-black w-14 h-14 relative focus:outline-none bg-white lg:hidden" @click.outside="isOpenNavigation=false" @click="isOpenNavigation = !isOpenNavigation">
              <div class="block w-5 absolute left-1/2 top-1/2 focus:outline-none  transform  -translate-x-1/2 -translate-y-1/2">
                 <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': isOpenNavigation,' -translate-y-1.5': !isOpenNavigation }"></span>
                 <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'opacity-0': isOpenNavigation } "></span>

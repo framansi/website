@@ -18,12 +18,12 @@
         <meta name="msapplication-TileImage" content="/img/icons/ms-icon-144x144.png">
         <meta name="theme-color" content="#f19F19">
         <meta name="mobile-web-app-capable" content="yes">
-        <meta name="parsely-link" content="https://francescomansi.me/chi-sono">
+        <meta name="parsely-link" content="https://francescomansi.me/contattami">
 
         <link rel="canonical" href="https://francescomansi.me/contattami"/>
         <meta property="og:title" content="Francesco Mansi - Web Developer e Web Designer" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://francescomansi.me/chi-sono" />
+        <meta property="og:url" content="https://francescomansi.me/contattami" />
         <meta property="og:image" content="https://francescomansi.me/img/francesco-mansi-web.jpg" />
         <meta property="og:site_name" content="Francesco Mansi - Web Developer e Web Designer" />
         <meta property="og:description" content="Puoi contattarmi per qualsiasi tipo di proposta lavorativa di consulenza digitale, sviluppo web o formazione che tu sia Aziende, Associazione o Privato sul territorio di Monopoli e Italiano." />
