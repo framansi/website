@@ -182,6 +182,14 @@
                            href="{{route('portfolio.index')}}">Servizi</a>
                     </li>
                     <li class="mr-3">
+                        <a class="inline-block py-2 text-4xl font-semibold @if(request()->routeIs('course.laravel')) text-gray-900 @else text-gray-500 @endif  no-underline px-7 hover:text-gray-900 hover:text-underline"
+                           href="{{route('course.laravel')}}">Laravel</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block py-2 text-4xl font-semibold @if(request()->routeIs('course.tailwind')) text-gray-900 @else text-gray-500 @endif  no-underline px-7 hover:text-gray-900 hover:text-underline"
+                           href="{{route('course.tailwind')}}">Tailwind CSS</a>
+                    </li>
+                    <li class="mr-3">
                         <a class="inline-block py-2 text-4xl font-semibold @if(request()->routeIs('contact')) text-gray-900 @else text-gray-500 @endif  no-underline px-7 hover:text-gray-900 hover:text-underline"
                            href="{{route('contact')}}">Contattami</a>
                     </li>
